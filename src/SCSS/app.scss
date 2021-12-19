@@ -1,0 +1,19 @@
+//Hay dos sintaxis para relacionar el archivo que creamos en :variables.scss y contenido.scss
+//Anterior, pero la que se usa
+
+/*
+@import "base/variables"; //No se requiere poner el guion bajo ni la extension
+@import "contenido/contenido";
+*/
+//En la sintaxis nueva, requiere que en la carpeta base y contenido contenga un archivo llamado index.scss
+//Y utilizar la anotacion @forward que apunta a las otras carpetas (EJEMPLO: "variables")
+//Luego usar las anotaciones @use pero solamente poniendo "base" y "contenido" la cual ira a la carpeta, busca el index, y el index apunta a los
+//otros archivos
+@use "base";
+@use "layout";
+//El problema con @Use es que no se peuden usar las variables por ejemplo, por lo que hay que tambien importar por ejemplo 
+//en _contenido.scss la variable
+
+
+
+
